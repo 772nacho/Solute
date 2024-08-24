@@ -1,0 +1,29 @@
+.headbar {
+    display: none;
+    @include mediaQuery($break-md){
+        &.variant-2 {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: $clr-primary;
+            color: $clr-light;
+            display: flex;
+            .headbar__wrapper {
+                display: flex;
+                justify-content: space-between;
+            }
+            .headbar__info {
+                gap: 2rem;
+                display: flex;
+                ul {
+                    display: flex;
+                    gap: 1rem;
+                }
+            }
+            .headbar__icons {
+                display: flex;
+                gap: 2rem;
+            }
+        }
+    }
+}
