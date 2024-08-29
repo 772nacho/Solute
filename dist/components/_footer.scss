@@ -5,7 +5,7 @@
         color: $clr-gray;
     }
     &__wrapper {
-        padding-bottom: 4rem;
+        padding: 6rem 0 4rem 0; //ito yung babaguhin
         display: flex;
         flex-direction: column;
         gap: 3rem;
