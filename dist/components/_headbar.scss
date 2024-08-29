@@ -1,5 +1,6 @@
 .headbar {
     display: none;
+    z-index: 999;
     @include mediaQuery($break-md){
         &.variant-2 {
             position: fixed;
