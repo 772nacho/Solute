@@ -1,0 +1,237 @@
+.btn {
+    display: inline-block;
+    padding: 12px 32px;
+    background: transparent;
+    border: 1px solid transparent;
+    transition: 0.5s ease;
+    text-align: center;
+    font-weight: 600;
+    font-size: 14px;
+    &.primary {
+        color: $clr-light;
+        border-color: $clr-primary;
+        position: relative;
+        overflow: hidden;
+        &::before {
+            position: absolute;
+            display: inline-block;
+            content: " ";
+            background-color: $clr-primary;
+            height: 100%;
+            width: 50%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            transition: 0.5s ease;
+        }
+        &::after{
+            position: absolute;
+            display: inline-block;
+            content: " ";
+            background-color: $clr-primary;
+            height: 100%;
+            width: 50%;
+            top: 0;
+            right: 0;
+            z-index: -1;
+            transition: 0.5s ease;
+        }
+        &:hover {
+            &::before {
+                width: 0;
+            }
+            &::after{ 
+                width: 0;
+            }
+        }
+    }
+    &.secondary {
+        color: $clr-light;
+        border-color: $clr-primary;
+        position: relative;
+        overflow: hidden;
+        &::before {
+            position: absolute;
+            display: inline-block;
+            content: " ";
+            background-color: $clr-primary;
+            height: 100%;
+            width: 0;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            transition: 0.5s ease;
+        }
+        &::after{
+            position: absolute;
+            display: inline-block;
+            content: " ";
+            background-color: $clr-primary;
+            height: 100%;
+            width: 0;
+            top: 0;
+            right: 0;
+            z-index: -1;
+            transition: 0.5s ease;
+        }
+        &:hover {
+            &::before {
+                width: 50%;
+            }
+            &::after{ 
+                width: 50%;
+            }
+        }
+    }
+    &.tertiary {
+        color: $clr-light;
+        border-color: $clr-primary;
+        position: relative;
+        overflow: hidden;
+        &::before {
+            position: absolute;
+            display: inline-block;
+            content: " ";
+            background-color: $clr-primary;
+            height: 100%;
+            width: 50%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            transition: 0.5s ease;
+        }
+        &::after{
+            position: absolute;
+            display: inline-block;
+            content: " ";
+            background-color: $clr-primary;
+            height: 100%;
+            width: 50%;
+            top: 0;
+            right: 0;
+            z-index: -1;
+            transition: 0.5s ease;
+        }
+        &:hover {
+            color: $clr-dark;
+            &::before {
+                width: 0;
+            }
+            &::after{ 
+                width: 0;
+            }
+        }
+    }
+    &.large {
+        background-color: $clr-primary;
+        padding: 2rem 15rem;
+        color: $clr-light;
+        border-color: $clr-primary;
+    }
+    &.light {
+        padding: 1rem 2rem;
+        background-color: $clr-light;  
+        color: $clr-primary;
+        border-color: $clr-primary;
+        &:hover {
+        background-color: $clr-primary;
+        color: $clr-light;
+        }
+    }
+    &.toDark {
+        padding: 1rem 2rem;
+        background-color: $clr-primary;  
+        color: $clr-light;
+        &:hover {
+        background-color: $clr-dark;
+        }
+    }
+    &.bubble {
+        background-color: transparent;
+        overflow: hidden;
+        position: relative;
+        display: inline-flex;
+        color: $clr-light;
+        border-color: $clr-primary;
+        span {
+            padding: 1.5rem 2rem;
+            border-radius: 50%;
+            position: absolute;
+            background-color: $clr-primary;
+            height: 100%;
+            width: 25%;
+            transform: translateY(0)scale(2);
+            top: 0;
+            z-index: -1;
+            transition: 0.5s ease;  
+            &:first-child {
+                left: 0;
+            }
+            &:nth-child(2) {
+                left: 3rem;
+                transition-delay: 100ms;
+            }
+            &:nth-child(3) {
+                left: 6rem;
+                transition-delay: 200ms;
+            }
+            &:last-child {
+                left: 9.5rem;
+                transition-delay: 300ms;
+            }
+        }
+        &:hover {
+            span {
+                top: 8rem;
+            }
+        }
+    }
+    &.bigBubble {
+        background-color: transparent;
+        overflow: hidden;
+        position: relative;
+        display: inline-flex;
+        color: $clr-light;
+        border-color: $clr-primary;
+        span {
+            padding: 1.5rem 2rem;
+            border-radius: 50%;
+            position: absolute;
+            background-color: $clr-primary;
+            height: 100%;
+            width: 20%;
+            transform: translateY(0)scale(2);
+            top: 0;
+            z-index: -1;
+            transition: 0.5s ease;  
+            &:first-child {
+                left: 0;
+            }
+            &:nth-child(2) {
+                left: 3rem;
+                transition-delay: 80ms;
+            }
+            &:nth-child(3) {
+                left: 6rem;
+                transition-delay: 160ms;
+            }
+            &:nth-child(4) {
+                left: 9rem;
+                transition-delay: 240ms;
+            }
+            &:nth-child(5) {
+                left: 12rem;
+                transition-delay: 320ms;
+            }
+            &:last-child {
+                left: 17rem;
+                transition-delay: 480ms;
+            }
+        }
+        &:hover {
+            span {
+                top: 8rem;
+            }
+        }
+    }
+}
