@@ -10,6 +10,11 @@ document.addEventListener('DOMContentLoaded', function() {
         gutter:0,
         center:true,
         mouseDrag:true,
+        responsive: {
+            900: {
+              items: 2
+            }
+          },
         controlsText: [
         '<i class="fa-solid fa-chevron-left"></i>','<i class="fa-solid fa-chevron-right"></i>'
         ]
@@ -24,10 +29,12 @@ document.addEventListener('DOMContentLoaded', function() {
         autoplay: false,
         controls: false,
         nav: false,
-        gutter:50, 
-        // autoWidth:true,
+        responsive: {
+            900: {
+              items: 2
+            }
+          },
         mouseDrag:true,
-        edgePadding:40,
         center:true,
         loop:true,
         responsive:{
@@ -52,7 +59,11 @@ document.addEventListener('DOMContentLoaded', function() {
         gutter:50,
         center:true,
         mouseDrag:true,
-        
+        responsive: {
+            900: {
+              items: 3
+            }
+          },
     });
 });
 
