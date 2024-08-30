@@ -12,7 +12,9 @@ document.addEventListener('DOMContentLoaded', function() {
         mouseDrag:true,
         responsive: {
             900: {
-              items: 2
+              items: 2,
+              gutter:50,
+              edgePadding:50
             }
           },
         controlsText: [

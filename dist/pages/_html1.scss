@@ -90,8 +90,8 @@
                 }
             } 
             @include mediaQuery($break-md){
-                top:30rem;
-                left:30rem;
+                top:25rem;
+                left:25rem;
             } 
         }
     }
@@ -420,7 +420,6 @@
     }
     
 }
-
 .home-1__review{
     
     &__title{
@@ -480,9 +479,8 @@
         }
         &__text{
             display: flex;
-            
+            flex-direction: column;
             margin-bottom: 2rem;
-            gap: 1rem;
             h3{
                 span{
                     color: $clr-gray;
@@ -499,7 +497,6 @@
         display: flex;
         justify-content: space-between;
         width: 93%;
-        
         z-index: 8;
         margin: 0rem;
         margin-top: 18%;
@@ -529,7 +526,9 @@
             margin: 2rem 0;
             padding: 5rem 0;
             background-color: $clr-gray; 
-            
+            &:hover{
+                cursor:grab;
+            }
             
             li{
                 text-align: center;

@@ -363,8 +363,8 @@ body {
 }
 @media screen and (min-width: 760px) {
   .home-1__about__heading__pop {
-    top: 30rem;
-    left: 30rem;
+    top: 25rem;
+    left: 25rem;
   }
 }
 .home-1__about__sub {
@@ -760,8 +760,8 @@ body {
 }
 .home-1__review__profile__text {
   display: flex;
+  flex-direction: column;
   margin-bottom: 2rem;
-  gap: 1rem;
 }
 .home-1__review__profile__text h3 span {
   color: #CBC7C1;
@@ -802,6 +802,9 @@ body {
   margin: 2rem 0;
   padding: 5rem 0;
   background-color: #CBC7C1;
+}
+.home-1__brand__wrapper .brand__slider:hover {
+  cursor: grab;
 }
 .home-1__brand__wrapper .brand__slider li {
   text-align: center;
