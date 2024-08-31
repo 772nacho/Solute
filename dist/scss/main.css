@@ -279,7 +279,7 @@ body {
   gap: 1rem;
   text-align: center;
   align-items: center;
-  height: 100vh;
+  height: 80rem;
   width: 100vw;
   justify-content: center;
   color: #ffffff;
@@ -1516,6 +1516,102 @@ body {
   filter: unset;
 }
 
+.home-3__services__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+.home-3__services .container {
+  background-color: #f6f6f8;
+}
+.home-3__services--img img {
+  width: 100%;
+}
+.home-3__services__title {
+  position: relative;
+}
+.home-3__services__title h4 {
+  font-size: 1.4rem;
+  color: #ff7426;
+}
+.home-3__services__title h4::after {
+  position: absolute;
+  content: "";
+  top: 2rem;
+  left: 3rem;
+  right: 0;
+  bottom: 0;
+  background-image: url(../img/home-3/title-line.png);
+  background-repeat: no-repeat;
+}
+.home-3__services__title h2 {
+  padding-top: 2rem;
+  font-size: 3rem;
+}
+.home-3__services__cards {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 2rem;
+}
+.home-3__services__cards .home-3__services__card {
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 4rem;
+  padding: 2rem;
+}
+.home-3__services__cards .home-3__services__card--icon i {
+  position: relative;
+  color: #ff7426;
+  font-size: 4rem;
+  background-color: #f6f6f8;
+  transition: 0.5s ease;
+}
+.home-3__services__cards .home-3__services__card--icon i:hover {
+  color: #ffffff;
+  background-color: #ff7426;
+}
+.home-3__services__cards .home-3__services__card--icon:first-child i {
+  padding: 3rem 3.5rem;
+}
+.home-3__services__cards .home-3__services__card--text {
+  gap: 3rem;
+  width: 25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.home-3__services__cards .home-3__services__card--text h4 {
+  font-size: 2rem;
+}
+.home-3__services__cards .home-3__services__card--text span {
+  display: block;
+  height: 0.5rem;
+  width: 6.5rem;
+  background-color: #f6f6f8;
+}
+.home-3__services__cards .home-3__services__card--text p {
+  color: #696969;
+}
+@media screen and (min-width: 760px) {
+  .home-3__services .home-3__services__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+  }
+  .home-3__services .home-3__services__cards .home-3__services__card {
+    padding: 5rem;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .home-3__services--img img {
+    width: 30rem;
+  }
+}
+
 .home-7__banner {
   background-image: url(../img/home-7/hero7-bg2.jpg);
   height: 100vh;
@@ -2190,7 +2286,7 @@ body {
 
 .headbar {
   display: none;
-  z-index: 999;
+  z-index: 2;
 }
 @media screen and (min-width: 760px) {
   .headbar.variant-2 {
