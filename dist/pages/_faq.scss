@@ -1,87 +1,14 @@
-
-// ul {
-//     list-style: none;
-//   }
-  
-//   li {
-//     list-style: none;
-//   }
-  
-//   a {
-//     color: #2b2b2b;
-//     text-decoration: none;
-//   }
-//   .faq_tabs ul {
-//     cursor: pointer;
-//     display: flex;
-//     gap: 8rem;
-//     justify-content: center;
-//   }
-  
-//   .faq_tabs ul {
-//     color: grey;
-//   }
-  
-//   .faq_tabs ul li:hover {
-//     color: black;
-//   }
-  
-//   .faq_tabs ul .faq_tab {
-//     display: flex;
-//     flex-direction: column;
-//     gap: 2rem;
-//     text-align: center;
-//   }
-  
-//   .faq_tabs ul .faq_tab.active span {
-//     color: black;
-//   }
-//   .faq_cards{
-//     display: flex;
-//     flex-direction: row;
-//   }
-//   .faq_content--body {
-//     display: flex;
-//     flex-direction: column;
-//     gap: 2rem;
-//   }
-  
-//   .faq_content--body.active {
-//     display: block;
-//   }
-  
-//   .faq_tab.active {
-//     font-weight: bold;
-//     color: #007BFF;
-//   }
-  
-//   .faq_content--body {
-//     display: none;
-//   }
-  
-//   .faq_content--body.active {
-//     display: block;
-//   }
-//   .faq_content--text p {
-//     height: auto;
-//     max-height: 0;
-//     overflow: hidden;
-//   }
-//   .faq_content--text p.open {
-//     max-height: 50rem;
-//     padding: 0.75rem;
-//     transition-duration: 0.8s;
-  
-//   }
 .faq_banner{
+    overflow: hidden;
+    margin-top: 0;
     &_wrapper{
         background: url(../img/faq/faqBanner.jpg);
+        object-fit: contain;
+        object-position: center;
         background-size: cover;
         background-blend-mode: darken;
         background-color: rgb(0, 0, 0,0.5);
         max-width: 100%;
-        width: 100vw;
-        height: 50vh;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -90,29 +17,43 @@
     }
     &_title{
         text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20rem;
         h1{
-            margin: 14rem;
+            margin-top: 10rem;
             font-size: 5rem;
             color: $clr-light;
         }
         p{
+            margin-bottom:5rem;
             color: $clr-light;
-            bottom: 0;
             font-size: 1.5rem;
-            padding-top: 1rem;
             border-top: 1px solid gray;
-            width: 85vw;
+            width: 40rem;
             span{
                 color: $clr-primary;
             }
-            @include mediaQuery($break-md){
-                width: 70vw;
+        }
+    }
+    @include mediaQuery($break-md){
+        margin-top: 12.8rem;
+        &_title{
+            h1{
+                margin-top: 20rem;
+            }
+            p{
+                padding-top: 1rem;
+                margin-bottom:2rem;
+                width: 110rem;
             }
         }
     }
-
 }
 .faq{
+    overflow: hidden;
     &_content--body{
         display: none;
         flex-direction: column;
@@ -151,7 +92,7 @@
     &_content--text{
         margin-bottom: 5rem ;
         p{
-            color: $clr-gray;
+            color: $clr-accent;
             height: auto;
             max-height: 0;
             overflow: hidden;
@@ -165,11 +106,9 @@
         }
     }
     &_tabs{
-        padding:3rem ;
         @include mediaQuery($break-md){
             display: flex;
             justify-content: center;
-           
         }
         ul{
             cursor: pointer;
@@ -180,19 +119,17 @@
             color:$clr-gray;
             font-weight: 500;
             font-size: larger;
-            width: 50rem;
+            width: 100%;
             @include mediaQuery($break-md){
                 display: flex;
                 flex-direction: row;
                 width: 100%;
                 gap: 8rem;
-               
             }
             .faq_tab{
                 display: flex;
                 flex-direction: column;
                 gap: 2rem;
-             
                 &.active{
                     color: $clr-dark;
                     border-bottom: solid 3px $clr-primary;
