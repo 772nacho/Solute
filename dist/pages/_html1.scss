@@ -15,7 +15,7 @@
         width: 100vw;
         justify-content: center;
         color: $clr-light;
-        
+       
         overflow: hidden;
         span{
             color: $clr-primary;
@@ -71,7 +71,7 @@
         &__image{
             text-align: center;
             img{
-                width: 40rem;
+                width: 45rem;
             }
         }
         &__pop{
@@ -88,7 +88,7 @@
                 span{
                     font-size:xx-large;
                 }
-            } 
+            }
             @include mediaQuery($break-md){
                 top:25rem;
                 left:25rem;
@@ -102,7 +102,7 @@
         gap: 1rem;
         h3{
             color: $clr-primary;
-            margin: 2rem 0;
+            margin-top: 2rem;
             display: flex;
             align-items: center;
             justify-content: start;
@@ -119,8 +119,16 @@
             }
 
         }
+        h1{
+            font-size: xx-large;
+        }
+        p{
+            margin: 4rem 0;
+            color: $clr-gray;
+        }
         .comment{
             margin: 2rem 0;
+            padding: 1rem;
             position: relative;
             color:$clr-dark; 
             text-transform: uppercase;
@@ -158,7 +166,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 30%;
+            width: 40%;
             &::after{
                 content: '';
                 flex: 1 0.5;
@@ -174,12 +182,16 @@
                 margin: 0 10px;   
             }
         }
+        h1{
+            font-size: xx-large;
+        }
     }
     &__content{
+        margin: 3rem 0;
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 1rem;
+        gap: 3rem;
         @include mediaQuery($break-md){
             display: flex;
             flex-direction: row;
@@ -189,17 +201,28 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            width: 100%;
             box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+            img{
+                filter: brightness(1);
+                transition: 0.5s ease-in-out;
+                width: 100%;
+            }
             p{
                 margin: 2rem 0;
+                padding: 2rem;
                 text-align: center;
+                font-weight: 700;
+                font-size: larger;
                 span{
                     color: $clr-primary;
+                    font-weight: 400;
+                    font-size: large;
                 }
             }
             .icons{
                 position: absolute;
-                bottom: 8rem;
+                bottom: 13rem;
                 transition: 0.5 ease;
                 opacity: 0;
                 z-index: -1;
@@ -216,14 +239,14 @@
             &:hover{
                 .icons{
                     z-index: 1;
-                    bottom: 10rem;
+                    bottom: 17rem;
                     transition: 0.5s ease-in-out;
                     opacity: 1;
                     
                 }
                 img{
                     filter: brightness(0.5);
-                    transition: 0.5s ease;
+                    transition: 0.5s ease-in-out;
                 }
             }
         }
@@ -254,32 +277,37 @@
         }
     }
     &__tab{
-        
-        text-align: center;
         margin: 4rem 0;
+        
+        h1{
+            font-size: xx-large;
+        }
         ul{
             margin-top: 5rem;
-            display: flex;
-            flex-direction: column;
+            display: block;
             gap: 2rem;
+            li{
+                display: inline-block;
+                margin: 1.5rem 0.5rem;
+                text-decoration: underline;
+            }
         }
         &__nav{
-            @include mediaQuery($break-md){
-                border-bottom: solid 1px $clr-gray;
-            }
+            
             &:hover{
                 color: $clr-primary;
                 transition: 0.5s ease-in-out;
             }
             &.active{
                 color: $clr-primary;
-                border-bottom: solid 1px $clr-primary;
             }
         }
         @include mediaQuery($break-md){
             display: flex; 
+            align-items: center;
             justify-content: space-around;
             ul{
+                margin-top: 0;
                 display: flex;
                 flex-direction: row;
             }
@@ -299,7 +327,7 @@
             display: block;
             opacity: 1;
             transform: translateY(0);
-            @include gridEven(1, 1rem);
+            @include gridEven(1, 2rem);
             @include mediaQuery($break-md){
                 @include gridEven(3, 1rem);
                 max-width: 100vw;
@@ -311,29 +339,31 @@
         overflow: hidden;
         margin-bottom: 0;
         text-align: center;
-        
+        width: 100%;
+        height: 25rem;
         &:hover{
             .home-1__project__item__text{
-                bottom: 0.7rem; 
+                bottom: 0rem; 
+            }       
+        }
+        &__image{         
+            img{
+                width: 100%;
             }
-            
         }
         &__text{
             content: "";
             position: absolute;
             width: 100%; 
-            height: 100%;
             background-color: rgba(0, 0, 0, 0.7);
-            clip-path: polygon(0 0, 100% 70%, 100% 100%, 0% 100%);
-            left: 2.8rem;
-            bottom: -10rem;
+            clip-path: polygon(0 0, 100% 100%, 100% 100%, 0% 100%);
+            bottom: -30rem;
             text-align: center;
             transition: 0.5s ease;
             background:$clr-dark ;
             opacity: 0.8;
             color: $clr-light;
-            width:40rem;
-            height: 10rem;
+            height: 15rem;
             display: flex;
             align-items: center;
             p{
@@ -341,9 +371,6 @@
                 span{
                     color: $clr-primary;
                 }
-            }
-            @include mediaQuery($break-md){
-                left: 0.8rem;
             }
         }
     }
@@ -365,7 +392,10 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 30%;
+            width: 90%;
+            @include mediaQuery($break-md){
+                width: 80%;
+            }
             &::after{
                 content: '';
                 flex: 1 0.5;
@@ -381,8 +411,12 @@
                 margin: 0 10px;   
             }
         }
+        h1{
+            font-size: xx-large;
+        }
     }
     &__content{
+        margin: 5rem 0;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -390,14 +424,12 @@
         &__item{
             box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             top:0;
-            margin: 2rem;
-            padding: 2rem;
+            padding: 5rem;
             gap: 3rem;
+            width: 100%;
             
-            width: 35rem;
-            height: 25rem;
             h4::after{
                 content: "→"; 
                 margin-left: 10px; 
@@ -406,7 +438,7 @@
             }
             i{
                 color: $clr-primary;
-                font-size: 5rem;
+                font-size: 4rem;
             }
             p{
                 margin: 2rem 0;
@@ -461,7 +493,6 @@
         gap:3rem;
     }
     &__item{
-        max-width: 100vw;
         width: 100%;
         padding: 5rem;
         margin: 0 auto;
@@ -496,15 +527,15 @@
     .tns-controls{
         display: flex;
         justify-content: space-between;
-        width: 93%;
+        width: 94%;
         z-index: 8;
         margin: 0rem;
-        margin-top: 18%;
+        margin-top: 20%;
         position: absolute;
         button{
             border: none;
             background: transparent;
-            font-size: 5rem;
+            font-size: 4rem;
             i{
                 color:$clr-primary;
                 opacity: 0.5;
