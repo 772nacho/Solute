@@ -26,7 +26,7 @@
     transition: 0.5s ease;
 }
 @mixin centerBg() {
-    background-position: center;
+    background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
 }
