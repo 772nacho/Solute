@@ -162,7 +162,7 @@ body {
 }
 .btn.large {
   background-color: #ff7426;
-  padding: 2rem 15rem;
+  width: 27rem;
   color: #ffffff;
   border-color: #ff7426;
 }
@@ -1113,7 +1113,7 @@ body {
   right: 0;
   bottom: 0;
   background: url("../img/home-3/home3-banner.jpg");
-  background-position: center;
+  background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
   filter: saturate(0%);
@@ -1723,7 +1723,164 @@ body {
   filter: unset;
 }
 
+.home-3-form {
+  padding: 6rem 0;
+  overflow: hidden;
+  position: relative;
+}
+.home-3-form::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url(../img/home-3/home3-faq.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: saturate(0%) brightness(50%);
+  z-index: -1;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.home-3-form__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.home-3-form__consultation form {
+  position: relative;
+  background-color: rgba(197, 191, 191, 0.202);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 4rem;
+  padding: 3rem 0;
+}
+.home-3-form__consultation form::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  height: 0.5rem;
+  width: 70%;
+  background-color: #ff7426;
+}
+.home-3-form__consultation form h2 {
+  font-size: 3rem;
+  color: #ffffff;
+}
+.home-3-form__consultation form input, .home-3-form__consultation form textarea {
+  font-family: "Space Grotesk", sans-serif;
+  border: solid 1px #ff7426;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.15);
+  width: 80%;
+  padding: 1.5rem 2rem;
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+.home-3-form__consultation form input:focus, .home-3-form__consultation form textarea:focus {
+  outline: none;
+}
+.home-3-form__consultation form textarea {
+  resize: vertical;
+  height: 15.6rem;
+}
+.home-3-form__faq--title {
+  position: relative;
+  padding-bottom: 3rem;
+}
+.home-3-form__faq--title h4 {
+  font-size: 1.4rem;
+  color: #ff7426;
+}
+.home-3-form__faq--title h4:after {
+  position: absolute;
+  content: "";
+  top: 2rem;
+  left: 0.5rem;
+  right: 0;
+  bottom: 0;
+  background-image: url(../img/home-3/title-line.png);
+  background-repeat: no-repeat;
+}
+.home-3-form__faq--title h2 {
+  color: #ffffff;
+  font-size: 3rem;
+  padding-top: 2rem;
+}
+.home-3-form__faq .home-3-faq__content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.home-3-form__faq .home-3-faq__content .home-3-faq__item {
+  padding: 2rem;
+  border: solid 1px #CBC7C1;
+  border-width: 0 0 1px 0;
+}
+.home-3-form__faq .home-3-faq__content .home-3-faq__item:last-child {
+  border: 0;
+}
+.home-3-form__faq .home-3-faq__content .home-3-faq__item h2 {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+  width: 100%;
+  cursor: pointer;
+  color: #ffffff;
+}
+.home-3-form__faq .home-3-faq__content .home-3-faq__item h2 span {
+  display: inline-block;
+  font-size: 2.5rem;
+  background-color: #ff7426;
+  height: 8rem;
+  width: 8rem;
+  line-height: 8rem;
+  text-align: center;
+  margin-right: 1.5rem;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  flex-shrink: 0;
+}
+.home-3-form__faq .home-3-faq__content .home-3-faq__item p {
+  color: #CBC7C1;
+  padding-left: 9rem;
+  height: auto;
+  max-height: 0;
+  overflow: hidden;
+  transition: 1s ease;
+  transition-delay: 0s;
+}
+.home-3-form__faq .home-3-faq__content .home-3-faq__item p.open {
+  max-height: 50rem;
+}
+@media screen and (min-width: 760px) {
+  .home-3-form__wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .home-3-form__wrapper .home-3-form__faq--title h2 {
+    font-size: 5rem;
+  }
+  .home-3-form__wrapper .home-3-faq__item {
+    width: 60rem;
+  }
+  .home-3-form__wrapper input, .home-3-form__wrapper textarea, .home-3-form__wrapper a {
+    width: 45rem;
+  }
+  .home-3-form__consultation {
+    width: 50rem;
+  }
+}
+
 .home-3__testimonial {
+  padding: 6rem 0;
   background-color: #222429;
 }
 .home-3__testimonial--img {
@@ -1783,7 +1940,6 @@ body {
   font-size: 1.6rem;
 }
 .home-3__testimonial .tns-outer .tns-nav {
-  padding-bottom: 8rem;
   display: flex;
   gap: 1rem;
 }
@@ -1799,7 +1955,11 @@ body {
   background-color: #ff7426;
 }
 @media screen and (min-width: 760px) {
+  .home-3__testimonial--text h2 {
+    font-size: 5rem;
+  }
   .home-3__testimonial__wrapper {
+    align-items: center;
     display: flex;
     justify-content: space-between;
   }
@@ -1812,7 +1972,11 @@ body {
 }
 
 .blog-3 {
+  background-color: #f6f6f8;
   padding: 6rem 0;
+}
+.blog-3__wrapper {
+  position: relative;
 }
 .blog-3__title {
   position: relative;
@@ -1836,7 +2000,31 @@ body {
   font-size: 3rem;
   padding: 2rem 0 4rem 0;
 }
+.blog-3__slider--controls {
+  display: flex;
+  height: -moz-fit-content;
+  height: fit-content;
+  z-index: 2;
+  position: absolute;
+  top: 39.5rem;
+  left: -2rem;
+  gap: 124rem;
+}
+.blog-3__slider--controls i {
+  padding: 1rem;
+  cursor: pointer;
+  color: #222429;
+  background-color: #ffffff;
+  border: solid 1px #CBC7C1;
+  transition: 0.5s ease;
+}
+.blog-3__slider--controls i:hover {
+  background-color: #ff7426;
+  color: #ffffff;
+  border-color: #ff7426;
+}
 .blog-3__slider--item {
+  background-color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1880,6 +2068,18 @@ body {
 }
 .blog-3__slider--text a i {
   font-size: 1.3rem;
+}
+@media screen and (min-width: 760px) {
+  .blog-3__title h4::after {
+    top: 2rem;
+    left: 62rem;
+  }
+  .blog-3__title h2 {
+    font-size: 5rem;
+  }
+  .blog-3__slider--item img {
+    width: 42.5rem;
+  }
 }
 
 .home-7__banner {
