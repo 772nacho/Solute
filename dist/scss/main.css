@@ -268,45 +268,67 @@ body {
   top: 8rem;
 }
 
-.faq_banner_wrapper {
+.faq_banner {
+  overflow: hidden;
+  margin-top: 0;
   background: url(../img/faq/faqBanner.jpg);
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
   background-size: cover;
   background-blend-mode: darken;
   background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+.faq_banner_wrapper {
   max-width: 100%;
-  width: 100vw;
-  height: 50vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
-  z-index: -1;
 }
 .faq_banner_title {
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20rem;
 }
 .faq_banner_title h1 {
-  margin: 14rem;
+  margin-top: 10rem;
   font-size: 5rem;
   color: #ffffff;
 }
 .faq_banner_title p {
+  margin-bottom: 5rem;
   color: #ffffff;
-  bottom: 0;
-  font-size: 1.5rem;
-  padding-top: 1rem;
+  font-size: 1.56rem;
   border-top: 1px solid gray;
-  width: 85vw;
+  width: 40rem;
 }
 .faq_banner_title p span {
   color: #ff7426;
 }
 @media screen and (min-width: 760px) {
+  .faq_banner {
+    margin-top: 12.8rem;
+  }
+  .faq_banner_title h1 {
+    margin-top: 20rem;
+  }
   .faq_banner_title p {
-    width: 70vw;
+    padding-top: 1rem;
+    margin-bottom: 2rem;
+    width: 110rem;
   }
 }
 
+.faq {
+  padding-top: 6rem;
+  overflow: hidden;
+}
 .faq_content--body {
   display: none;
   flex-direction: column;
@@ -342,10 +364,11 @@ body {
   display: block;
 }
 .faq_content--text {
+  cursor: pointer;
   margin-bottom: 5rem;
 }
 .faq_content--text p {
-  color: #CBC7C1;
+  color: #696969;
   height: auto;
   max-height: 0;
   overflow: hidden;
@@ -356,8 +379,8 @@ body {
   max-height: 45rem;
   padding: 0.75rem;
 }
-.faq_tabs {
-  padding: 3rem;
+.faq_content--text h3 {
+  font-size: 1.6rem;
 }
 @media screen and (min-width: 760px) {
   .faq_tabs {
@@ -373,8 +396,8 @@ body {
   justify-content: center;
   color: #CBC7C1;
   font-weight: 500;
-  font-size: larger;
-  width: 50rem;
+  font-size: 1.6rem;
+  width: 100%;
 }
 @media screen and (min-width: 760px) {
   .faq_tabs ul {
@@ -394,6 +417,7 @@ body {
   border-bottom: solid 3px #ff7426;
 }
 .faq_cards {
+  padding-top: 6rem;
   display: flex;
   flex-direction: column;
   margin: 1rem;
@@ -2350,7 +2374,7 @@ body {
 
 .headbar {
   display: none;
-  z-index: 999;
+  z-index: 2;
 }
 @media screen and (min-width: 760px) {
   .headbar.variant-2 {
