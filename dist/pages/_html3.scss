@@ -730,6 +730,8 @@
   @include mediaQuery($break-md) {
     display: flex;
     flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
     &__absolute {
       img {
         height: 50rem;

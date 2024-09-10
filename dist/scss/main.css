@@ -1836,6 +1836,8 @@ body {
   .home-3-services {
     display: flex;
     flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
   }
   .home-3-services__absolute img {
     height: 50rem;
@@ -2653,6 +2655,17 @@ body {
   border: solid 1px #696969;
   border-width: 0 0 1px 0;
 }
+.footer__column ul li {
+  transition: 0.5s ease;
+  overflow: hidden;
+  max-height: 0;
+  height: auto;
+}
+.footer__column ul.active li {
+  transition: 1s ease;
+  max-height: 50rem;
+  overflow: unset;
+}
 .footer__column:first-child p {
   padding-top: 4rem;
 }
@@ -2662,6 +2675,9 @@ body {
   gap: 0.5rem;
 }
 .footer__column:first-child ul li {
+  height: unset;
+  max-height: unset;
+  overflow: unset;
   width: -moz-fit-content;
   width: fit-content;
   border-radius: 5rem;
@@ -2687,9 +2703,16 @@ body {
   background-color: #ff7426;
   border: solid 1rem #ff7426;
 }
-.footer__column:nth-child(2) h3, .footer__column:nth-child(3) h3 {
+.footer__column:nth-child(2) .footer__group, .footer__column:nth-child(3) .footer__group {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  cursor: pointer;
   color: #ffffff;
   font-size: 2.5rem;
+}
+.footer__column:nth-child(2) .footer__group i, .footer__column:nth-child(3) .footer__group i {
+  font-size: 1.5rem;
 }
 .footer__column:nth-child(2) ul, .footer__column:nth-child(3) ul {
   padding-top: 4rem;
@@ -2710,17 +2733,22 @@ body {
   font-size: 1rem;
   color: #ff7426;
 }
-.footer__column:last-child h3 {
+.footer__column:last-child .footer__group {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  cursor: pointer;
   color: #ffffff;
   font-size: 2.5rem;
 }
-.footer__column:last-child p {
-  padding: 4rem 0 3rem 0;
+.footer__column:last-child .footer__group i {
+  font-size: 1.5rem;
 }
 .footer__column:last-child ul {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  padding: 4rem 0 3rem 0;
 }
 .footer__column:last-child a {
   display: flex;
@@ -2835,6 +2863,9 @@ body {
 .header__wrapper .header__content .header__nav .sub__menu.open {
   max-height: 50rem;
   transition-duration: 600ms;
+}
+.header__wrapper .header__content .header__nav .sub__menu li a:hover {
+  color: #696969;
 }
 .header__wrapper .header__content .header__nav .sub__menu li:last-child {
   border: none;

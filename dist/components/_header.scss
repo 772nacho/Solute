@@ -83,6 +83,13 @@
                         max-height: 50rem;
                         transition-duration: 600ms;
                     }
+                    li {
+                        a {
+                            &:hover {
+                                color: $clr-accent;
+                            }
+                        }
+                    }
                     li:last-child {
                         border: none;
                     }
