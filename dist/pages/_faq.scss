@@ -1,6 +1,9 @@
 .faq_banner{
-    &_wrapper{
-        background: url(../img/faq/faqBanner.jpg);
+    overflow: hidden;
+    margin-top: 0;
+    background: url(../img/faq/faqBanner.jpg);
+        object-fit: contain;
+        object-position: center;
         background-size: cover;
         background-blend-mode: darken;
         background-color: rgb(0, 0, 0,0.5);
@@ -11,6 +14,7 @@
         flex-direction: column;
         align-items: center;
         position: relative;
+        
     }
     &_title{
         text-align: center;
@@ -27,9 +31,7 @@
         p{
             margin-bottom:5rem;
             color: $clr-light;
-            bottom: 0;
-            font-size: 1.5rem;
-            padding-top: 1rem;
+            font-size: 1.56rem;
             border-top: 1px solid gray;
             width: 40rem;
             span{
@@ -52,6 +54,8 @@
     }
 }
 .faq{
+    padding-top: 6rem;
+    overflow: hidden;
     &_content--body{
         display: none;
         flex-direction: column;
@@ -120,8 +124,8 @@
             justify-content: center;
             color:$clr-gray;
             font-weight: 500;
-            font-size: larger;
-            width: 50rem;
+            font-size: 1.6rem;
+            width: 100%;
             @include mediaQuery($break-md){
                 display: flex;
                 flex-direction: row;
@@ -172,4 +176,3 @@
     }
     }
     }
-}
