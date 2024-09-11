@@ -272,6 +272,7 @@ body {
   background: url(../img/home-1/home1-banner.jpg);
   background-size: cover;
   max-width: 100%;
+  background-position: center center;
   background-blend-mode: darken;
   background-color: rgba(0, 0, 0, 0.5);
   display: flex;
@@ -279,7 +280,7 @@ body {
   gap: 1rem;
   text-align: center;
   align-items: center;
-  height: 100vh;
+  height: 65rem;
   width: 100vw;
   justify-content: center;
   color: #ffffff;
