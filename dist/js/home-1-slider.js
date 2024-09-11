@@ -7,14 +7,13 @@ document.addEventListener('DOMContentLoaded', function() {
         autoplay: false,
         controls: true,
         nav: false,
-        gutter:0,
-        center:true,
+        
+        center:false,
         mouseDrag:true,
         responsive: {
             900: {
               items: 2,
-              gutter:50,
-              edgePadding:50
+              center:false
             }
           },
         controlsText: [
@@ -68,4 +67,3 @@ document.addEventListener('DOMContentLoaded', function() {
           },
     });
 });
-

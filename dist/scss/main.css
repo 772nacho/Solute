@@ -334,7 +334,7 @@ body {
   .home-1__about__wrapper {
     display: flex;
     justify-content: space-evenly;
-    gap: 2rem;
+    gap: 4rem;
   }
 }
 .home-1__about__heading {
@@ -363,8 +363,16 @@ body {
 }
 @media screen and (min-width: 760px) {
   .home-1__about__heading__pop {
-    top: 25rem;
-    left: 25rem;
+    top: 35rem;
+    left: 37rem;
+  }
+  .home-1__about__heading__pop h3 {
+    padding: 1rem 2rem;
+  }
+}
+@media screen and (min-width: 760px) {
+  .home-1__about__heading__image img {
+    width: 60rem;
   }
 }
 .home-1__about__sub {
@@ -372,6 +380,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  margin: 0rem;
 }
 .home-1__about__sub h3 {
   color: #ff7426;
@@ -584,17 +593,18 @@ body {
   display: none;
   text-align: center;
   position: relative;
-  transform: translateY(20px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 0.5s, transform 0.5s;
 }
 .home-1__project__content__item img {
   width: 40rem;
   height: 25rem;
 }
 .home-1__project__content__item.active {
-  display: block;
+  display: unset;
   opacity: 1;
-  transform: translateY(0);
+  transform: translateX(0);
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-gap: 2rem;
@@ -692,6 +702,7 @@ body {
   margin: 5rem 0;
   display: flex;
   flex-direction: column;
+  gap: 1rem;
   align-items: center;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
@@ -714,7 +725,21 @@ body {
 }
 .home-1__service__content__item i {
   color: #ff7426;
-  font-size: 4rem;
+  font-size: 3.5rem;
+  position: relative;
+  display: inline-block;
+  padding: 2rem;
+}
+.home-1__service__content__item i::after {
+  content: "";
+  position: absolute;
+  z-index: -99;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(252, 239, 203);
+  border-radius: 59% 41% 31% 69%/57% 53% 47% 43%;
 }
 .home-1__service__content__item p {
   margin: 2rem 0;
@@ -770,7 +795,7 @@ body {
   gap: 3rem;
 }
 .home-1__review__item {
-  width: 100%;
+  width: 40rem;
   padding: 5rem;
   margin: 0 auto;
   border: solid #CBC7C1 0.5px;
@@ -800,7 +825,7 @@ body {
 .home-1__review .tns-controls {
   display: flex;
   justify-content: space-between;
-  width: 94%;
+  width: 93.6%;
   z-index: 8;
   margin: 0rem;
   margin-top: 20%;
@@ -822,7 +847,21 @@ body {
 @media screen and (min-width: 760px) {
   .home-1__review .tns-controls {
     margin-top: 6%;
-    width: 90%;
+    width: 94.2%;
+  }
+  .home-1__review .tns-controls button {
+    border: solid 1px #ff7426;
+    padding: 1rem;
+    opacity: 0.5;
+    transition: 0.5s ease-in;
+  }
+  .home-1__review .tns-controls button:hover {
+    opacity: 1;
+    background-color: #ff7426;
+    transition: 0.5s ease-in-out;
+  }
+  .home-1__review .tns-controls button:hover i {
+    color: #ffffff;
   }
 }
 
@@ -904,6 +943,7 @@ body {
 }
 .home-1__blog__item__content h2 {
   margin: 2rem 0;
+  transition: 0.5s ease;
 }
 .home-1__blog__item__content h2:hover {
   color: #ff7426;
