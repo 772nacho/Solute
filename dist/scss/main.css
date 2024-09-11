@@ -1098,12 +1098,23 @@ body {
   flex-direction: row;
   justify-content: space-between;
 }
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+    background-color: #ffffff;
+  }
+  50% {
+    transform: translateY(60rem);
+    background-color: #ff7426;
+  }
+}
 .home-3-banner__circles span {
   background-color: #ff7426;
   opacity: 60%;
   border-radius: 100rem;
 }
 .home-3-banner__circles span:nth-child(odd) {
+  animation: bounce 4s infinite;
   height: 2rem;
   width: 2rem;
   transition: 0.5s ease;
@@ -1114,6 +1125,8 @@ body {
   width: 3rem;
 }
 .home-3-banner__circles span:nth-child(even) {
+  animation: bounce 6s infinite;
+  animation-delay: 50ms;
   height: 3rem;
   width: 3rem;
   transition: 0.5s ease;

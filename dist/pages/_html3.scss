@@ -1,4 +1,3 @@
-// ongoing banner > circles
 .home-3-banner {
   overflow: hidden;
     position: relative;
@@ -16,6 +15,16 @@
         z-index: -1;
     }
     &__circles {
+      @keyframes bounce {
+        0%, 100% {
+          transform: translateY(0);
+          background-color: $clr-light;
+        }
+        50% {
+          transform: translateY(60rem);
+          background-color: $clr-primary;
+        }
+      }
       width: 100%;
       position: absolute;
       display: flex;
@@ -26,6 +35,7 @@
         opacity: 60%;
         border-radius: 100rem;
         &:nth-child(odd) {
+          animation: bounce 4s infinite;
           height: 2rem;
           width: 2rem;
           transition: 0.5s ease;
@@ -36,6 +46,8 @@
           }
         }
         &:nth-child(even) {
+          animation: bounce 6s infinite;
+          animation-delay: 50ms;
           height: 3rem;
           width: 3rem;
           transition: 0.5s ease;
