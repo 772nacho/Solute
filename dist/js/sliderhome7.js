@@ -1,17 +1,17 @@
 var slider = tns({
-    container: '.home-7__brandSlider__wrapper',
-    items: 2,
+    container: '.sec8__slider',
+    items: 1,
     slideBy: 'page',
+    autoplay: false,
     edgePadding: 50,
     controls: false,
     mouseDrag: true,
     loop: true,
-    nav: false,
     gutter: 100,
-     responsive: {
+    responsive: {
       900: {
         items: 3,
         gutter: 300
-      }
+    }
     }  
-  });
+});
