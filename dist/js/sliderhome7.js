@@ -1,6 +1,6 @@
 var slider = tns({
-    container: '.home-7__brandSlider__wrapper',
-    items: 2,
+    container: '.sec8__slider',
+    items: 1,
     slideBy: 'page',
     autoplay: false,
     edgePadding: 50,
@@ -14,5 +14,4 @@ var slider = tns({
         gutter: 300
     }
     }  
- });
-
+});

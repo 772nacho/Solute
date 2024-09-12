@@ -5,7 +5,8 @@ var slider = tns({
     edgePadding: 50,
     controls: false,
     mouseDrag: true,
-    loop: false,
+    loop: true,
+    nav: false,
     gutter: 100,
      responsive: {
       900: {
